@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Anne Messenger</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+
+<body>
+
+<div id="canvas">
+<canvas id="myCanvas" width="180" height="70" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+// Create gradient
+var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"blue");
+grd.addColorStop(1,"cyan");
+
+// Fill with gradient
+ctx.fillStyle=grd;
+ctx.fillRect(0,0,180,70);
+// Add "M"
+var x1 = 60;
+var x2 = 120;
+var xDelta = ((x1 + x2) / 2) - x1;
+var height = 70;
+ctx.lineWidth = 5;
+ctx.strokeStyle = "#68d0ff";
+
+ctx.moveTo(x1, -1);
+ctx.lineTo(x1 - xDelta, height + 1);
+ctx.moveTo(x1, -1);
+ctx.lineTo(x1 + xDelta, height + 1);
+ctx.moveTo(x2,-1);
+ctx.lineTo(x2 - xDelta,height + 1);
+ctx.moveTo(x2, -1);
+ctx.lineTo(x2 + xDelta,height + 1);
+
+// Overlay "A"
+ctx.moveTo(x1 + xDelta, -1);
+ctx.lineTo(x1, height + 1);
+ctx.moveTo(x1 + xDelta, -1);
+ctx.lineTo(x2, height + 1);
+
+ctx.stroke();
+
+</script>
+<div>
+
+  <h1>Anne Messenger</h1>
+
+  <p>
+    <a id="mailto" href="mailto:am@annemessenger.com" target="_top">
+      am@annemessenger.com
+    </a>
+  </p>
+
+  <p>
+    Student at WebLab - Web Development Boot Camp,<br>
+    Front Range Community College, Longmont, Colorado
+  </p>
+
+  <p>
+    <a id="resume" href="http://annemessenger.com/portfolio/AnneMessenger.pdf">Resume 
+
+(PDF)</a>
+  </p>
+
+  <h3>
+    Portfolio
+  </h3>
+
+  <ul>
+    <li>Calculator</li>
+      <ul class="inside">
+        <li><a class="link" 
+
+href="http://annemessenger.com/portfolio/calculator1/index.html">Basic Calculator 
+
+(Functioning)</a></li>
+        <li><a class="link" 
+
+href="http://annemessenger.com/portfolio/calculator2/index.html">Expanded Calculator 
+
+(Design)</a></li>
+      </ul>
+    <li>Function Practice (Automated Test Framework)</li>
+      <ul class="inside">
+        <li><a class="link" 
+
+href="http://annemessenger.com/portfolio/function1/index.html">Basic Assignment</a></li>
+        <li><a class="link" 
+
+href="http://annemessenger.com/portfolio/function2/index.html">Extra Mathematical 
+
+Functions</a></li>
+      </ul>
+    <li>To-Do List</li>
+      <ul class="inside">
+        <li><a class="link" 
+
+href="http://annemessenger.com/portfolio/todo1/index.html">To-Do List 
+
+(Functioning)</a></li>
+        <li><a class="link" 
+
+href="http://annemessenger.com/portfolio/todo2/index.html">To-Do List (Design)</a></li>
+      </ul>
+  </ul>
+
+  <p id="back">Use the browser's back arrow to return from the portfolio links.</p>
+
+</div>
+
+</body>
+</html>
