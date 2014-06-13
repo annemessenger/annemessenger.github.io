@@ -11,14 +11,37 @@ body {
   margin-left: 40px;
 } 
 
-div {
+canvas {
+  align:left;
+}
+
+.canvas {
+  width: 240px;
+}
+
+#canvas {
+  align:left;
+}
+
+.logo {
   padding: 5px;
 }
 
+.content {
+  padding: 7px;
+  display: inline-block; 
+  vertical-align:top;
+}
+
 h1 {
-  font-family: Ariel, sans-serif;
+  font-family: Arial Narrow, sans-serif;
   padding: 0px;
   margin-top: 0px;
+  letter-spacing: -2px;
+}
+
+h3 {
+  padding-top: 15px;
 }
 
 p {
