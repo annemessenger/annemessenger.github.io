@@ -3,21 +3,17 @@ function displayLogo(c2, ctx2) {
   // Display logo with radial gradient and name
 
   // Get width and height 
+  var width = 240;
+  var height = 100;
   if (c2.hasAttribute("width") ) {
     var width = c2.getAttribute("width");
-  }
-  else {
-    var width = 240;
   }
   if (c2.hasAttribute("height")) {
     var height = c2.getAttribute("height") - 1;
   }
-  else {
-    var height = 100;
-  }
 
   // Create gradient
-  var grd2=ctx2.createRadialGradient(125,52,7,128,63,140);
+  var grd2=ctx2.createRadialGradient(125, 52, 7, 128, 63, 140);
   grd2.addColorStop(0,"blue");
   grd2.addColorStop(1,"cyan");
   ctx2.fillStyle=grd2;

@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
     <title>Anne Messenger</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <script type="text/javascript" src="logo.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
 
-<div class="logo">
-  <canvas id="myCanvas" width="236" height="101">
-  <img src="logo.jpg" width="236" height="100" alt="Anne Messenger"></canvas>
-</div>
+    <div class="logo">
+      <canvas id="myCanvas" width="236" height="101">
+      <img src="logo.jpg" width="236" height="100" alt="Anne Messenger"></canvas>
+    </div>
 
-<div class="content" style="display:inline-block; vertical-align:top;">
+    <div class="content">
 
-  <p>
-    <a id="mailto" href="mailto:am@annemessenger.com" target="_top">
-      am@annemessenger.com
-    </a>
-  </p>
+      <p>
+        <a id="mailto" href="mailto:am@annemessenger.com" target="_top">
+          am@annemessenger.com
+        </a>
+      </p>
 
-  <!-- p>
-    Student at WebLab - Web Development Boot Camp,<br>
-    Front Range Community College, Longmont, Colorado
-  </p -->
-  <p>
-    WebLab - Web Development Boot Camp, 2014<br>
-    Front Range Community College, Longmont, Colorado
-  </p>
+      <p>
+        WebLab - Web Development Boot Camp, 2014<br>
+        Front Range Community College, Longmont, Colorado
+      </p>
 
-  <p>
-    <a id="resume" href="AnneMessenger.pdf">Resume (PDF)</a>
-  </p>
+      <p>
+        <a id="resume" href="http://annemessenger.com/portfolio/AnneMessenger.pdf">Resume (PDF)</a>
+      </p>
 
-  <h3>
-    Portfolio
-  </h3>
+      <h3>
+        Portfolio
+      </h3>
 
-  <ul>
-    <li>Calculator</li>
-      <ul class="inside">
-        <li><a class="link" href="calculator1/index.html">Basic Calculator (Functioning)</a></li>
-        <li><a class="link" href="calculator2/index.html">Expanded Calculator (Design)</a></li>
+      <ul>
+        <li>Hangman Graphics</li>
+          <ul class="inside">
+            <li><a class="link" href="http://annemessenger.com/portfolio/hangmandemo/index.html">Hangman Graphics Demo (HTML5 Canvas)</a></li>
+          </ul>
+
+        <li>To-Do List</li>
+          <ul class="inside">
+            <li><a class="link" href="http://annemessenger.com/portfolio/todo1/index.html">To-Do List (Functioning - jQuery)</a></li>
+            <li><a class="link" href="http://annemessenger.com/portfolio/todo2/index.html">To-Do List (Design)</a></li>
+          </ul>
+
+        <li>Calculator</li>
+          <ul class="inside">
+            <li><a class="link" href="http://annemessenger.com/portfolio/calculator1/index.html">Basic Calculator (Functioning - JavaScript)</a></li>
+            <li><a class="link" href="http://annemessenger.com/portfolio/calculator2/index.html">Expanded Calculator (Design)</a></li>
+          </ul>
+
+        <li>Exercises</li>
+          <ul class="inside">
+            <li><a class="link" href="http://annemessenger.com/portfolio/recipes/index.html">Recipes (HTML5 / CSS3)</a></li>
+            <li><a class="link" href="http://annemessenger.com/portfolio/function1/index.html">JavaScript Functions &amp; Automated Testing - Basic</a></li>
+            <li><a class="link" href="http://annemessenger.com/portfolio/function2/index.html">JavaScript Functions & Automated Testing - Extra (Math)</a></li>
+            <li><a class="link" href="http://annemessenger.com/portfolio/jquery1/index.html">jQuery Exercise - Clone/Add/Count</a></li>
+            <li><a class="link" href="http://annemessenger.com/portfolio/jquery2/index.html">jQuery Exercise - Simplified AJAX</a></li>
+          </ul>
       </ul>
-    <li>Function Practice (Automated Test Framework)</li>
-      <ul class="inside">
-        <li><a class="link" href="function1/index.html">Basic Assignment</a></li>
-        <li><a class="link" href="function2/index.html">Extra Mathematical Functions</a></li>
-      </ul>
-    <li>To-Do List</li>
-      <ul class="inside">
-        <li><a class="link" href="todo1/index.html">To-Do List (Functioning)</a></li>
-        <li><a class="link" href="todo2/index.html">To-Do List (Design)</a></li>
-      </ul>
-  </ul>
 
-  <p id="back">Use the browser's back arrow to return from the portfolio links.</p>
+      <p id="back">Use the browser's back arrow to return from the portfolio links.</p>
 
-</div>
-<script>
+    </div>
 
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-displayLogo(c, ctx);
+    <script>
 
-</script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    displayLogo(c, ctx);
 
-</body>
+    </script>
+
+  </body>
 </html>
