@@ -5,6 +5,7 @@
     <title>Anne Messenger</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <script type="text/javascript" src="logo.js"></script>
+    <script type="text/javascript" src="http://annemessenger.com/portfolio/graphic/graphic.js"></script>
   </head>
 
   <body>
@@ -67,13 +68,83 @@
 
     </div>
 
+    <div class="graphic">
+
+      <div id="canvas">
+        <canvas id="myCanvas2" width="202" height="280" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
+      </div>
+
+      <div>
+        <button id="drawButton" onclick="drawAnotherImage()">Draw Another Image</button><br>
+            <button id="drawLine" onclick="drawOneLine()">Draw 1 Line</button>
+            <button id="undrawLine" onclick="undrawOneLine()">Undraw 1 Line</button><br>
+            <button id="finishButton" onclick="finishFast()">Finish Fast</button>
+            <button id="stopButton" onclick="stopDrawing()">Stop</button>
+      </div>
+
+    </div>
+
     <script>
 
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    displayLogo(c, ctx);
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      displayLogo(c, ctx);
+
+      // get elements and canvas context for later use
+      var c = document.getElementById("myCanvas2");
+      var b = document.getElementById("drawButton");
+      var s = document.getElementById("stopButton");
+      var d = document.getElementById("drawLine");
+      var u = document.getElementById("undrawLine");
+      var f = document.getElementById("finishButton");
+      var ctx2 = c.getContext("2d");
+
+      // get canvas width and height if possible
+      var width = 202;
+      var height = 280;
+      if (c.hasAttribute("width")) {
+        width = c.getAttribute("width");
+      }
+      if (c.hasAttribute("height")) {
+        height = c.getAttribute("height");
+      }
+
+      // set up baselines, clear areas, and center points for display
+      var outerMargin = 10;
+      var titleFont = "20px Arial";
+      var titleHeight = 20;
+      var textFont = "15px Arial";
+      var textHeight = 15;
+      var titleBase = setTitleBase();
+      var clearTextY = setClearTextY();
+      var clearTextHeight = setClearTextHeight();
+      var text1Base = setText1Base();
+      var text2Base = setText2Base();
+      var centerX = setCenterX();
+      var centerY = setCenterY();
+      var radius = setRadius();
+      var clearImageY = setClearImageY();
+      var clearImageHeight = setClearImageHeight();
+
+      displayTitle();
+
+      // handle for setInterval
+      var myVar;
+
+      // set up graphic calculation variables
+      var interval = 0;
+      var aInc = 0;
+      var nIter = 0;
+      var alpha = 0;
+      var linesDrawn = 0;
+
+      // disable some buttons
+      changeToState("finish");
+
+      // start drawing first image (the rest are initiated by callbacks)
+      getNew();
+      draw();
 
     </script>
-
   </body>
 </html>
